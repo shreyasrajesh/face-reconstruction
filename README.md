@@ -1,11 +1,12 @@
 # 2D Face reconstruction using SFSNet using Tensorflow
 
 This repository entirely reproduces the work done by Sengupta et. al. from University of Maryland and published in CVPR 2018. 
-Please refer the [Project Page](https://senguptaumd.github.io/SfSNet/) and the [Github repo](https://github.com/senguptaumd/SfSNet) for further details. The technical details can be found in the [paper](https://arxiv.org/pdf/1712.01261.pdf).
+Please refer the [Project Page](https://senguptaumd.github.io/SfSNet/) and the [Github repo](https://github.com/senguptaumd/SfSNet) for further details. The algorithmic details can be found in the [paper](https://arxiv.org/pdf/1712.01261.pdf).
 
 ## Features
 1. Face deconstruction - It provides the normal, shading, and albedo output for every input image. 
-2. Face reconstruction - It reconstructs any given face using the normal, shading and albedo deconstruction results. 
+2. Face reconstruction - It reconstructs any given face using the normal, shading and albedo deconstruction results with variation in lighting if desired.
+3. 3D face reconstruction - It inputs a 3D face and reconstructs it, with variations in lighting if desired. ( Work In Progress) 
 
 ## Installation and Usage
 
@@ -23,24 +24,24 @@ python data_loader.py --skipnet_batch_size 10
 
 Alternately, we can just run the ```setup.sh``` file to the same effect. Once the setup.sh file is run, the entire setup is complete. 
 
-### Training
+### Training module
 In order to train the network we can simply run the ```run.sh``` file. This considers a set of default training parameters. The values can be changed to suit requirements using the training help. Training help can be found by running, 
 ```
 python train.py --help
 ```
 
-### Testing
-To be added(After Training Complete)
+### Testing module
+To be added(Work in progress)
 
 
 ## Uninstallation
 
-In order to purge the entire conda env and restart with this repo from the beginning please run,
-```
-purge.sh
-```
 In order to just temporarily stop the environment and continue from the same point at a later stage we can instead use,
 ```
 source deactivate 3dface
+```
+In order to purge the entire conda env and restart with this repo from the beginning please run,
+```
+purge.sh
 ```
 
