@@ -31,7 +31,7 @@ python train.py --help
 ```
 
 ### Testing module
-To be added(Work in progress)
+To be added
 
 
 ## Uninstallation
